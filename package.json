@@ -1,0 +1,29 @@
+{
+  "name": "wesley_lucas_ca2",
+  "version": "1.0.0",
+  "description": "CA2 exercise by Wesley Lucas Mas",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "build": "npm run html-minifier && npm run posthtml-minifier && npm run media && npm run usage-check",
+    "prehtml-minifier": "del /S /Q dist",
+    "html-minifier": "html-minifier --input-dir src --output-dir dist --file-ext html --remove-comments --collapse-whitespace --minify-js false --minify-css false",
+    "posthtml-minifier": "html-minifier --input-dir src\\css\\pages --output-dir dist\\css\\pages --file-ext css --remove-comments --collapse-whitespace --minify-js false --minify-css true",
+    "media": "Xcopy /E /I src\\media dist\\media",
+    "usage-check": "npx check-html-links dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "windows"
+  ],
+  "author": "Wesley Lucas Mas",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "check-html-links": "^0.2.3",
+    "html-minifier": "^4.0.0"
+  }
+}

@@ -1,0 +1,371 @@
+<!-- CA2 realizada por Wesley Lucas Mas -->
+
+<!-- Escritorio: Microsoft Edge 95% zoom vista predeterminado -->
+
+<!-- Móvil: max-width: 500 -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/pages/index.css" rel="stylesheet">
+    <!-- Enlaces de iconos web css para el desarrollo de la AC2 -->
+    <link href='https://css.gg/chevron-down.css' rel='stylesheet'>
+    <link href='https://css.gg/search.css' rel='stylesheet'>
+    <link href='https://css.gg/shopping-bag.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://css.gg/link.css' rel='stylesheet'>
+    <link href='https://css.gg/menu.css' rel='stylesheet'>
+    <!-- Enlace a la fuente 'Karla' de Google -->
+    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+    <title>Pebona</title>
+</head>
+<body>
+  <!-- Desarrollo de la cabecera -->
+  <header class="pebona-header">
+    <nav>
+      <div class="pebona-content">
+        <a href="index.html"><img class="logo" src="media/img/logo_pebona.png" alt="No logo"></a>
+        <!-- Secciones de la barra de navegación -->
+        <ul class="nav-sections">
+          <li><a href="index.html">HOME <i class="gg-chevron-down"></i></a></li>
+          <li><a href="index.html">SHOP <i class="gg-chevron-down"></i></a></li>
+          <li><a href="index.html">BLOG</a></li>
+          <li><a href="index.html">PRODUCTS <i class="gg-chevron-down"></i></a></li>
+          <li><a href="index.html">ABOUT US</a></li>
+          <li><a href="index.html">CONTACT US</a></li>
+        </ul>
+        <!-- Barra de búsqueda -->
+        <form class="search-bar">
+          <input type="text" placeholder="Search our store">
+          <button type="submit"><i id="search-button" class="gg-search"></i></button>
+        </form>
+        <!-- Bolsa de la compra -->
+        <div class="shopping-bag">
+          <i id="bag" class="gg-shopping-bag"></i>
+          <div class="red-pop-up"></div>
+          <p class="red-pop-up-text">0</p>
+        </div>
+        <!-- Ajustes -->
+        <i id="gear" class="material-icons">settings</i>
+      </div>
+    </nav>
+  </header>
+  <!-- Desarrollo de los contenidos del nudo de la página web -->
+  <div class="general-content">
+    <!-- Contenido de fotografías en modo grid -->
+    <div class="welcome-content">
+      <!-- Organización y estructuración del grid de fotografías
+      dividiendo en diferentes sub-grids. Es decir:
+      1. Dividimos un grid en dos (columnas).
+      2. De cada subgrid generado, dividimos en otros subgrids en dos (filas)
+      3. De esas filas de grids, las dividimos otra vez en dos (columnas)
+      Y ese ha sido la planificación. -->
+      <div class="left-side">
+        <div class="ls-up">
+          <img id="hoodie-boy" src="https://cdn.shopify.com/s/files/1/0049/9043/5439/files/slide-1_3e514a28-4061-4b2d-bb13-28682e3520e7.jpg?v=1538904304" alt="No image">
+          <div class="hoodie-boy-elements">
+            <div class="horitzonal-elements">
+              <div class="limited-edition-tag">
+                <div id="red-tag"></div>
+                <p id="red-tag-text">LIMITED EDITION</p>
+              </div>
+              <p class="week-sale-text">Sale Offer 20% Off This Week</p>
+            </div>
+            <p class="sport-sneaker-2018">Sport Sneaker 2018</p>
+            <p class="explore-now">EXPLORE NOW</p>
+          </div>
+          <div class="slider-circles">
+            <span id="active-dot" class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+        <div class="ls-down">
+          <div class="lsd-left">
+            <div class="lsdl-up">
+              <img id="arrival-shoes-description" src="https://cdn.shopify.com/s/files/1/0049/9043/5439/files/banner-14.jpg?v=1537617822)" alt="No image">
+            </div>
+            <div class="lsdl-down">
+              <img id="accesories" src="https://cdn.shopify.com/s/files/1/0049/9043/5439/files/banner-15.jpg?v=1537617829)" alt="No image">
+            </div>
+          </div>
+          <div class="lsd-right">
+            <img id="handbag-description" src="https://cdn.shopify.com/s/files/1/0049/9043/5439/files/banner-16.jpg?v=1537617841)" alt="No image">
+          </div>
+        </div>
+      </div>
+      <div class="right-side">
+        <div class="rs-up">
+          <div class="rsu-left">
+            <img id="jacket" src="https://cdn.shopify.com/s/files/1/0049/9043/5439/files/banner-11_cb5b2a35-f164-488e-a02d-c66267b4a16c.jpg?v=1538904380)" alt="No image">
+          </div>
+          <div class="rsu-right">
+            <div class="rsur-up">
+              <img id="sunglasses" src="https://cdn.shopify.com/s/files/1/0049/9043/5439/files/banner-12_d32131a9-3376-4559-9fe1-4e7f9dda7d0e.jpg?v=1538904394)" alt="No image">
+            </div>
+            <div class="rsur-down">
+              <img id="sneaker-description" src="https://cdn.shopify.com/s/files/1/0049/9043/5439/files/banner-13_74db4690-c61e-46b1-9f90-4abebf720c94.jpg?v=1538904402)" alt="No image">
+            </div>
+          </div>
+        </div>
+        <div class="rs-down">
+          <img id="redhead-girl" src="https://cdn.shopify.com/s/files/1/0049/9043/5439/files/banner-17.jpg?v=1537617851)" alt="No image">
+        </div>
+      </div>
+    </div>
+    <!-- Contenido de productos trending divididos a través de una grid de 6 columnas con
+    sus respectivos detalles, además de información adicional que viene previamente al
+    listado -->
+    <div class="new-trending-products">
+      <section class="title-and-info">
+        <h2 class="title">New Trending Products</h2>
+        <p class="subtitle">Accumsan vitae pede lacus ut ullamcorper sollicitudin quisque libero est</p>
+      </section>
+      <div class="product-listing">
+        <!-- 1er Producto Trending -->
+        <div class="wallet-content">
+          <div class=wallet-content-imagery>
+            <img id="wallet" src="https://cdn.shopify.com/s/files/1/0049/9043/5439/products/product_13_664978c2-d878-43ca-99b1-c4c46170f0ac_large.jpg?v=1571714767" alt="No image">
+            <div class="wallet-discount"></div>
+            <p class="wallet-discount-text">5%</p>
+            <div class="wallet-extra">
+              <i class="gg-shopping-bag" title="Add to shopping bag"></i>
+              <i class="fa fa-heart" title="Wishlist"></i>
+              <i class="gg-link" title="Add to compare"></i>
+              <i class="gg-search" title="Quick View"></i>
+            </div>
+          </div>
+          <div class=wallet-info1>
+            <p class="krystle">Krystle</p>
+            <div class="star-rating">
+              <span class="star">&#9734;</span>
+              <span class="star">&#9734;</span>
+              <span class="star">&#9734;</span>
+              <span class="star">&#9734;</span>
+              <span class="star">&#9734;</span>
+            </div>
+          </div>
+          <div class=wallet-info2>
+            <p id="parezca-new-razonable">Parezca New Razonable</p>
+            <div class="wallet-price-update">
+              <p class="old-526">$526.00</p>
+              <p class="new-500">$500.00</p>
+            </div>
+          </div>
+        </div>
+        <!-- 2do Producto Trending -->
+        <div class="sneaker-content">
+          <div class=sneaker-content-imagery>
+            <img id="sneaker" src="https://cdn.shopify.com/s/files/1/0049/9043/5439/products/product_5_f073bdbe-103c-4341-9348-cb7fbf62087c_large.jpg?v=1571714766" alt="No image">
+            <div class="sneaker-discount"></div>
+            <p class="sneaker-discount-text">10%</p>
+            <div class="sneaker-extra">
+              <i class="gg-shopping-bag" title="Add to shopping bag"></i>
+              <i class="fa fa-heart" title="Wishlist"></i>
+              <i class="gg-link" title="Add to compare"></i>
+              <i class="gg-search" title="Quick View"></i>
+            </div>
+          </div>
+          <div class=sneaker-info1>
+            <p class="glus">Glus</p>
+            <div class="star-rating">
+              <span class="star">&#9734;</span>
+              <span class="star">&#9734;</span>
+              <span class="star">&#9734;</span>
+              <span class="star">&#9734;</span>
+              <span class="star">&#9734;</span>
+            </div>
+          </div>
+          <div class=sneaker-info2>
+            <p id="lorem-ipsum">Lorem Ipsum</p>
+            <div class="sneaker-price-update">
+              <p id="old-555">$555.00</p>
+              <p class="new-500">$500.00</p>
+            </div>
+          </div>
+        </div>
+        <!-- 3er Producto Trending -->
+        <div class="c-handbag-content">
+          <div class=c-handbag-content-imagery>
+            <img id="c-handbag" src="https://cdn.shopify.com/s/files/1/0049/9043/5439/products/product_6_e8c8fda6-8c7f-4adb-8f0a-e46272b3b714_large.jpg?v=1571714766" alt="No image">
+            <div class="c-handbag-discount"></div>
+            <p class="c-handbag-discount-text">30%</p>
+            <div class="c-handbag-extra">
+              <i class="gg-shopping-bag" title="Add to shopping bag"></i>
+              <i class="fa fa-heart" title="Wishlist"></i>
+              <i class="gg-link" title="Add to compare"></i>
+              <i class="gg-search" title="Quick View"></i>
+            </div>
+          </div>
+          <div class=c-handbag-info1>
+            <p id="generic">Generic</p>
+            <div class="star-rating">
+              <span class="star">&#9734;</span>
+              <span class="star">&#9734;</span>
+              <span class="star">&#9734;</span>
+              <span class="star">&#9734;</span>
+              <span class="star">&#9734;</span>
+            </div>
+          </div>
+          <div class=c-handbag-info2>
+            <p id="pensamiento-popular">Pensamiento Popular</p>
+            <div class="sneaker-price-update">
+              <p id="old-366">$366.00</p>
+              <p id="new-258">$258.00</p>
+            </div>
+          </div>
+        </div>
+        <!-- 4to Producto Trending -->
+        <div class="tr-sunglasses-content">
+          <div class=tr-sunglasses-content-imagery>
+            <img id="tr-sunglasses" src="https://cdn.shopify.com/s/files/1/0049/9043/5439/products/product_10_37630cd1-1590-4d25-982b-e513c20c72d0_large.jpg?v=1571714766" alt="No image">
+            <div class="tr-sunglasses-discount"></div>
+            <p class="tr-sunglasses-discount-text">6%</p>
+            <div class="tr-sunglasses-extra">
+              <i class="gg-shopping-bag" title="Add to shopping bag"></i>
+              <i class="fa fa-heart" title="Wishlist"></i>
+              <i class="gg-link" title="Add to compare"></i>
+              <i class="gg-search" title="Quick View"></i>
+            </div>
+          </div>
+          <div class=tr-sunglasses-info1>
+            <p id="imara">Imara</p>
+            <div class="star-rating">
+              <span class="star">&#9734;</span>
+              <span class="star">&#9734;</span>
+              <span class="star">&#9734;</span>
+              <span class="star">&#9734;</span>
+              <span class="star">&#9734;</span>
+            </div>
+          </div>
+          <div class=tr-sunglasses-info2>
+            <p id="predefinidos-cuando">Predefinidos Cuando</p>
+            <div class="sneaker-price-update">
+              <p id="old-190">$190.00</p>
+              <p id="new-180">$180.00</p>
+            </div>
+          </div>
+        </div>
+        <!--5to Producto Trending -->
+        <div class="gnome-sock-content">
+          <div class=gnome-sock-content-imagery>
+            <img id="gnome-sock" src="https://cdn.shopify.com/s/files/1/0049/9043/5439/products/Product-15_large.png?v=1571714767" alt="No image">
+            <div class="gnome-sock-discount"></div>
+            <p class="gnome-sock-discount-text">5%</p>
+            <div class="gnome-sock-extra">
+              <i class="gg-shopping-bag" title="Add to shopping bag"></i>
+              <i class="fa fa-heart" title="Wishlist"></i>
+              <i class="gg-link" title="Add to compare"></i>
+              <i class="gg-search" title="Quick View"></i>
+            </div>
+          </div>
+          <div class=gnome-sock-info1>
+            <p class="krystle">Krystle</p>
+            <div class="star-rating">
+              <span class="star">&#9734;</span>
+              <span class="star">&#9734;</span>
+              <span class="star">&#9734;</span>
+              <span class="star">&#9734;</span>
+              <span class="star">&#9734;</span>
+            </div>
+          </div>
+          <div class=gnome-sock-info2>
+            <p id="parezca-new-razonable-etc">Parezca New Razonable...</p>
+            <div class="gnome-sock-price-update">
+              <p class="old-526">$526.00</p>
+              <p class="new-500">$500.00</p>
+            </div>
+          </div>
+        </div>
+        <!-- 6to Producto Trending -->
+        <div class="xmas-accessory-content">
+          <div class=xmas-accessory-content-imagery>
+            <img id="xmas-accessory" src="https://cdn.shopify.com/s/files/1/0049/9043/5439/products/Produc-7_93aee2bd-341d-44e4-98b8-c75db67f2fc5_large.png?v=1571714767" alt="No image">
+            <div class="xmas-accessory-discount"></div>
+            <p class="xmas-accessory-discount-text">6%</p>
+            <div class="xmas-accessory-extra">
+              <i class="gg-shopping-bag" title="Add to shopping bag"></i>
+              <i class="fa fa-heart" title="Wishlist"></i>
+              <i class="gg-link" title="Add to compare"></i>
+              <i class="gg-search" title="Quick View"></i>
+            </div>
+            <div class="xmas-accessory-time-left">
+              <p id="days-left">598 Days</p>
+              <p id="hours-left">13 Hour</p>
+              <p id="minutes-left">31 Min</p>
+              <p id="seconds-left">24 Sec</p>
+            </div>
+          </div>
+          <div class=xmas-accessory-info1>
+            <p class="glus">Glus</p>
+            <div class="star-rating">
+              <span class="star">&#9734;</span>
+              <span class="star">&#9734;</span>
+              <span class="star">&#9734;</span>
+              <span class="star">&#9734;</span>
+              <span class="star">&#9734;</span>
+            </div>
+          </div>
+          <div class=xmas-accessory-info2>
+            <p id="quedando-esencialmente">Quedando Esencialmente...</p>
+            <div class="xmas-accessory-price-update">
+              <p id="old-559">$559.00</p>
+              <p id="new-526">$526.00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Desarrollo del pie de página con información relacionada con temas
+  de copyright, suscripción al newsletter y enlace a las redes sociales -->
+  <footer class="pebona-footer">
+    <nav class="pebona-additional-info">
+      <div class="copyright">
+        <a href="index.html"><img class="logo" src="media/img/logo_pebona.png" alt="No logo"></a>
+        <p id="pebona-copyright-info">Copyright Ⓒ 2018 <mark title="#">Pebona</mark> Themes. All Right Reserved.</p>
+      </div>
+      <div class="newsletter-advert">
+        <p id="letter-sign-up-title">Sign Up For Our Newsletter</p>
+        <p id="letter-sign-up-info">Get E-mail updates about our latest shop and special offers.</p>
+      </div>
+      <form class="email-address">
+        <input type="email" placeholder="Your Email Address">
+        <button id="sign-up-button" type="submit">SIGN UP</button>
+      </form>
+      <div class="social-media">
+        <div id="twitter-logo">
+          <button class="social-media-circle blue-twitter"></button>
+          <i id="twitter" class="fa fa-twitter"></i>
+        </div>
+        <div id="facebook-logo">
+          <button class="social-media-circle blue-facebook"></button>
+          <i id="facebook" class="fa fa-facebook"></i>
+        </div>
+        <div id="instagram-logo">
+          <button class="social-media-circle pink-instagram"></button>
+          <i id="instagram" class="fa fa-instagram"></i>
+        </div>
+        <div id="google-plus-logo">
+          <button class="social-media-circle red-google"></button>
+          <i id="google-plus" class="fa fa-google-plus"></i>
+        </div>
+        <div id="pinterest-logo">
+          <button class="social-media-circle purple-pinterest"></button>
+          <i id="pinterest" class="fa fa-pinterest-p"></i>
+        </div>
+        <div id="linkedin-logo">
+          <button class="social-media-circle blue-linkedin"></button>
+          <i id="linkedin" class="fa fa-linkedin"></i>
+        </div>
+      </div>
+    </nav>
+  </footer>
+</body>
+</html>

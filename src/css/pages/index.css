@@ -1,0 +1,2690 @@
+/* CA2 realizada por Wesley Lucas Mas */
+
+/*
+Esta primera parte de código se centra en el
+modo escritorio.
+El navegador en el que se ha trabajado en esta versión
+ha sido en Microsoft Edge con una vista predeterminada
+del 95% (almenos según indicaba en mi propio portátil
+en el navegador de Edge).
+
+Para ver el apartado móvil, ir a la línea 1311.
+*/
+
+/* AVISO: Sé que para la versión móvil depende de qué
+elementos no es necesario repetir las líneas de código
+css para cada uno de ellos porque se comparten entre 
+ambas versiones móvil y escritorio.
+Pero como no paraban de salirme problemas con el layout
+de los elementos constantemente, he tenido que dejar líneas
+repetidas porque sí. Sino, imposible que me saliese decente
+el resultado final de la versión móvil.
+Lección aprendida: la próxima vez se comienza con el desarrollo
+de la versión móvil, y luego ya la versión escritorio */
+
+html {
+    font-family: 'Karla';
+    margin: 20px 50px 50px 30px;
+}
+
+/******* HEADER ********/
+
+.pebona-header {
+    font-size: 10px;
+    display: flex;
+    position: fixed;
+    background-color: #ffffff;
+    margin-top: -90px;
+    padding: 20px 34px 10px 10px;
+    z-index: 100;
+}
+
+.pebona-content {
+    display: flex;
+    align-items: center;
+}
+
+.pebona-content a {
+    font-size: medium;
+    font-weight: 600;
+}
+
+.logo {
+    width: auto;
+    height: auto;
+}
+
+.nav-sections {
+    display: flex;
+    margin: 0px 0px 0px 82px;
+}
+
+.nav-sections li {
+    display: flex;
+    margin: 0px 15px 0px 15px;
+    align-items: center;
+}
+
+.nav-sections a:hover {
+    color: #d2201c;
+}
+
+.nav-sections a {
+    color: #000000;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+#hamburger-icon:after {
+    display:none;
+    width: 50px;
+    height: 5px;
+    background-color: black;
+}
+
+#hamburger-icon {
+    display:none;
+    width: 50px;
+    height: 5px;
+    background-color: black;
+}
+
+#hamburger-icon:before {
+    display:none;
+    width: 50px;
+    height: 5px;
+    background-color: black;
+}
+
+.pebona-content input[type=text] {
+    border: none;
+    font-family: "Karla";
+    font-size: 16px;
+    font-weight:bold;
+    outline: none;
+}
+
+.search-bar {
+    margin: 0px 0px 0px 350px;
+}
+
+::placeholder {
+    color:#000000;
+    opacity: 33%;
+}
+
+input{
+    height:auto;
+    width:75%
+}
+
+.pebona-content button[type=submit] {
+    border: none;
+    outline: none;
+    color:unset;
+    background-color: transparent;
+}
+
+.gg-search {
+    cursor: pointer;
+}
+
+.gg-search:hover {
+    color: #d2201c;
+}
+
+.shopping-bag {
+    position: relative;
+    margin: 3px 0px 0px 30px;
+    cursor: pointer;
+}
+
+.shopping-bag:hover {
+    color: #d2201c;
+}
+
+.red-pop-up-text {
+    color: #f6f6f6;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 2.2px;
+    left: 20px;
+    font-weight: lighter;
+    font-size: 90%;
+}
+
+.red-pop-up {
+    background: #d2201c;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: relative;
+    bottom: 10px;
+    left: 15px;
+}
+
+#bag {
+    position: absolute;
+    bottom: 0px;
+}
+
+#gear{
+    margin: 0px 0px 5px 35px;
+    cursor: pointer;
+}
+
+#gear:hover {
+    color: #d2201c;
+}
+
+/******* GENERAL CONTENT ********/
+
+.general-content {
+    margin: 70px 0px 0px 0px;
+}
+
+.welcome-content {
+    margin: 20px 0px 20px 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.left-side {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.hoodie-boy-elements {
+    display: flex;
+    flex-direction: column;
+    top: 319px;
+    left: 95px;
+    position: relative;
+    align-items: flex-start;
+}
+
+.horitzonal-elements {
+    display: flex;
+    flex-direction: row;
+}
+
+#red-tag{
+    height: 30px;
+    width: 111px;
+    background-color: #d2201c;
+    border-radius: 3px 3px 3px 3px;
+    position: absolute;
+}
+
+#red-tag-text {
+    color: white;
+    position: relative;
+    font-size: small;
+    margin: 8px 8px 8px 6px;
+}
+
+.week-sale-text {
+    color: black;
+    font-size: larger;
+    font-weight: bold;
+    margin: 3px 0px 0px 10px;
+}
+
+.sport-sneaker-2018 {
+    color: black;
+    font-size: 65px;
+    font-weight: 600;
+    margin: 20px 0px 0px 0px;
+}
+
+.explore-now {
+    color: black;
+    font-size: 15px;
+    font-weight: 600;
+    margin:60px 0px 0px 0px;
+}
+
+.slider-circles {
+    position: absolute;
+    bottom: 165px;
+    left: 404px;
+}
+
+.slider-circles span{
+    margin:0px 5px 0px 5px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+#active-dot {
+    height: 15px;
+    width: 15px;
+    background-color: #d2201c;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.ls-down {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.lsd-left{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.right-side {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.rs-up {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.rsu-right {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+#hoodie-boy {
+    width: 772px;
+    height: 599px;
+    padding: 0px 3.25px 5px 0px;
+    position: absolute;
+}
+
+#jacket {
+    width: 379px;
+    height: 599px;
+    padding: 0px 7.5px 5px 5px;
+}
+
+#sunglasses {
+    width: 347px;
+    height: 296px;
+}
+
+#sneaker-description {
+    width: 347px;
+    height: 296px;
+}
+
+#arrival-shoes-description {
+    width: 390px;
+    height: 293px;
+    padding: 5px 0px 0px 0px;
+}
+
+#accesories {
+    width: 390px;
+    height: 296px;
+    padding: 3px 0px 0px 0px;
+}
+
+#handbag-description {
+    width: 376px;
+    height: 599px;
+    padding: 5px 5px 0px 7.5px;
+}
+
+#redhead-girl {
+    width: 734px;
+    height: 599px;
+    padding: 5px 0px 0px 5px;
+}
+
+.title-and-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    margin: 70px 0px 0px 0px; 
+    font-size: xx-large;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title:after {
+    content: url(https://cdn.shopify.com/s/files/1/0049/9043/5439/t/2/assets/title.png);
+    margin:-3% 0;
+}
+
+.subtitle {
+    margin: 25px 0px 65px 0px;
+}
+
+.product-listing {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin: 0px 0px 100px 0px;
+}
+
+.product-listing div {
+    padding: 5px 5px 5px 5px;
+}
+
+.fa-heart {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.fa-heart:hover {
+    color: #d2201c;
+}
+
+.gg-link {
+    cursor: pointer;
+}
+
+.gg-link:hover {
+    color: #d2201c;
+}
+
+.gg-shopping-bag {
+    cursor: pointer;
+}
+
+.gg-shopping-bag:hover {
+    color: #d2201c;
+}
+
+.wallet-content {
+    display: flex;
+    flex-direction: column;
+    transition: all .2s ease-in-out;
+}
+
+.wallet-content:hover {
+    box-shadow: 1px 1px 10px #c7c7c7;
+}
+
+.wallet-content-imagery {
+    block-size: 225px;
+    position:relative;
+    left: 4px;
+}
+
+#wallet {
+    width: 225px;
+    height: auto;
+}
+
+.wallet-discount{
+    height: 25px;
+    width: 55px;
+    background-color: #d2201c;
+    border-radius: 4px 4px 4px 4px;
+    position: relative;
+    bottom: 214px;
+    left: 17px;
+}
+
+.wallet-discount-text {
+    color: #f6f6f6;
+    position: relative;
+    bottom: 254px;
+    left: 39px;
+    font-weight: lighter;
+    font-size: 90%;
+}
+
+.wallet-extra {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: #ffffff;
+    align-items: center;
+    border: 1px;
+    grid-gap: 1px;
+    box-shadow: 1px 1px 5px grey;
+    height: 40px;
+    width: 185px;
+    justify-items: center;
+    margin: 0px 20px 0px 20px;
+    position: relative;
+    top: -141px;
+    left: -6px;
+    transform: rotateX(-90deg);
+    transition: transform 0.4s;
+}
+
+.wallet-content:hover .wallet-extra {
+    transform: rotateX(0deg);
+}
+
+.wallet-info1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0px 10px 0px;
+}
+
+.krystle {
+    font-size: small;
+    margin: 0px 0px 0px 0px;
+}
+
+.krystle:hover{
+    color: #d2201c;
+    transition: color 0.2s;
+    cursor: pointer;
+}
+
+.wallet-info2 {
+    display: flex;
+    flex-direction: column;
+}
+
+#parezca-new-razonable {
+    margin: 0px 0px 5px 0px;
+}
+
+#parezca-new-razonable:hover {
+    color: #d2201c;
+}
+
+#parezca-new-razonable:after{
+    content: '';
+    position: absolute;
+    width: 0; 
+    height: 1px;
+    display: block;
+    right: 0;
+    transition: width .2s ease;
+}
+   
+#parezca-new-razonable:hover:after{
+    width: 10.7%;
+    left: 3%;
+    background: #d2201c;
+}
+
+.wallet-price-update {
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.old-526 {
+    font-size: medium;
+    text-decoration: line-through;
+    margin: 8px 0px 0px 0px;
+}
+
+.new-500{
+    font-size: large;
+    color: #d2201c;
+    margin: 8px 0px 0px 15px;
+}
+
+.sneaker-content {
+    display: flex;
+    flex-direction: column;
+    transition: all .2s ease-in-out;
+}
+
+.sneaker-content:hover {
+    box-shadow: 1px 1px 10px #c7c7c7;
+}
+
+.sneaker-content-imagery {
+    block-size: 225px;
+    position:relative;
+    left: 4px;
+}
+
+#sneaker {
+    width: 225px;
+    height: auto;
+}
+
+.sneaker-discount{
+    height: 25px;
+    width: 55px;
+    background-color: #d2201c;
+    border-radius: 4px 4px 4px 4px;
+    position: relative;
+    bottom: 214px;
+    left: 17px;
+}
+
+.sneaker-discount-text {
+    color: #f6f6f6;
+    position: relative;
+    bottom: 254px;
+    left: 39px;
+    font-weight: lighter;
+    font-size: 90%;
+}
+
+.sneaker-extra {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: #ffffff;
+    align-items: center;
+    border: 1px;
+    grid-gap: 1px;
+    box-shadow: 1px 1px 5px grey;
+    height: 40px;
+    width: 185px;
+    justify-items: center;
+    margin: 0px 20px 0px 20px;
+    position: relative;
+    top: -141px;
+    left: -6px;
+    transform: rotateX(-90deg);
+    transition: transform 0.4s;
+}
+
+.sneaker-content:hover .sneaker-extra {
+    transform: rotateX(0deg);
+}
+
+.sneaker-info1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0px 10px 0px;
+}
+
+.glus {
+    font-size: small;
+    margin: 0px 0px 0px 0px;
+}
+
+.glus:hover{
+    color: #d2201c;
+    transition: color 0.2s;
+    cursor:pointer;
+}
+
+.sneaker-info2 {
+    display: flex;
+    flex-direction: column;
+}
+
+#lorem-ipsum {
+    margin: 0px 0px 5px 0px;
+}
+
+#lorem-ipsum:hover {
+    color: #d2201c;
+}
+
+#lorem-ipsum:after{
+    content: '';
+    position: absolute;
+    width: 0; 
+    height: 1px;
+    display: block;
+    right: 0;
+    transition: width .2s ease;
+}
+   
+#lorem-ipsum:hover:after{
+    width: 6.1%;
+    left: 18.9%;
+    background: #d2201c;
+}
+
+.sneaker-price-update {
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#old-555 {
+    font-size: medium;
+    text-decoration: line-through;
+    margin: 8px 0px 0px 0px;
+}
+
+.c-handbag-content {
+    display: flex;
+    flex-direction: column;
+    transition: all .2s ease-in-out;
+}
+
+.c-handbag-content:hover {
+    box-shadow: 1px 1px 10px #c7c7c7;
+}
+
+.c-handbag-content-imagery {
+    block-size: 225px;
+    position:relative;
+    left: 4px;
+}
+
+#c-handbag {
+    width: 225px;
+    height: auto;
+}
+
+.c-handbag-discount{
+    height: 25px;
+    width: 55px;
+    background-color: #d2201c;
+    border-radius: 4px 4px 4px 4px;
+    position: relative;
+    bottom: 214px;
+    left: 17px;
+}
+
+.c-handbag-discount-text {
+    color: #f6f6f6;
+    position: relative;
+    bottom: 254px;
+    left: 39px;
+    font-weight: lighter;
+    font-size: 90%;
+}
+
+.c-handbag-extra {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: #ffffff;
+    align-items: center;
+    border: 1px;
+    grid-gap: 1px;
+    box-shadow: 1px 1px 5px grey;
+    height: 40px;
+    width: 185px;
+    justify-items: center;
+    margin: 0px 20px 0px 20px;
+    position: relative;
+    top: -141px;
+    left: -6px;
+    transform: rotateX(-90deg);
+    transition: transform 0.4s;
+}
+
+.c-handbag-content:hover .c-handbag-extra {
+    transform: rotateX(0deg);
+}
+
+.c-handbag-info1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0px 10px 0px;
+}
+
+#generic {
+    font-size: small;
+    margin: 0px 0px 0px 0px;
+}
+
+#generic:hover{
+    color: #d2201c;
+    transition: color 0.2s;
+    cursor: pointer;
+}
+
+.c-handbag-info2 {
+    display: flex;
+    flex-direction: column;
+}
+
+#pensamiento-popular {
+    margin: 0px 0px 5px 0px;
+}
+
+#pensamiento-popular:hover {
+    color: #d2201c;
+}
+
+#pensamiento-popular:after{
+    content: '';
+    position: absolute;
+    width: 0; 
+    height: 1px;
+    display: block;
+    right: 0;
+    transition: width .2s ease;
+}
+   
+#pensamiento-popular:hover:after{
+    width: 9.7%;
+    left: 35%;
+    background: #d2201c;
+}
+
+.c-handbag-price-update {
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#old-366 {
+    font-size: medium;
+    text-decoration: line-through;
+    margin: 8px 0px 0px 0px;
+}
+
+#new-258{
+    font-size: large;
+    color: #d2201c;
+    margin: 8px 0px 0px 15px;
+}
+
+.tr-sunglasses-content {
+    display: flex;
+    flex-direction: column;
+    transition: all .2s ease-in-out;
+}
+
+.tr-sunglasses-content:hover {
+    box-shadow: 1px 1px 10px #c7c7c7;
+}
+
+.tr-sunglasses-content-imagery {
+    block-size: 225px;
+    position:relative;
+    left: 4px;
+}
+
+#tr-sunglasses {
+    width: 225px;
+    height: auto;
+}
+
+.tr-sunglasses-discount{
+    height: 25px;
+    width: 55px;
+    background-color: #d2201c;
+    border-radius: 4px 4px 4px 4px;
+    position: relative;
+    bottom: 214px;
+    left: 17px;
+}
+
+.tr-sunglasses-discount-text {
+    color: #f6f6f6;
+    position: relative;
+    bottom: 254px;
+    left: 39px;
+    font-weight: lighter;
+    font-size: 90%;
+}
+
+.tr-sunglasses-extra {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: #ffffff;
+    align-items: center;
+    border: 1px;
+    grid-gap: 1px;
+    box-shadow: 1px 1px 5px grey;
+    height: 40px;
+    width: 185px;
+    justify-items: center;
+    margin: 0px 20px 0px 20px;
+    position: relative;
+    top: -141px;
+    left: -6px;
+    transform: rotateX(-90deg);
+    transition: transform 0.4s;
+}
+
+.tr-sunglasses-content:hover .tr-sunglasses-extra {
+    transform: rotateX(0deg);
+}
+
+.tr-sunglasses-info1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0px 10px 0px;
+}
+
+#imara {
+    font-size: small;
+    margin: 0px 0px 0px 0px;
+    cursor:pointer;
+}
+
+#imara:hover{
+    color: #d2201c;
+    transition: color 0.2s;
+}
+
+.tr-sunglasses-info2 {
+    display: flex;
+    flex-direction: column;
+}
+
+#predefinidos-cuando {
+    margin: 0px 0px 5px 0px;
+}
+
+#predefinidos-cuando:hover {
+    color: #d2201c;
+}
+
+#predefinidos-cuando:after{
+    content: '';
+    position: absolute;
+    width: 0; 
+    height: 1px;
+    display: block;
+    right: 0;
+    transition: width .2s ease;
+}
+   
+#predefinidos-cuando:hover:after{
+    width: 9.5%;
+    left: 50.8%;
+    background: #d2201c;
+}
+
+.tr-sunglasses-price-update {
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#old-190 {
+    font-size: medium;
+    text-decoration: line-through;
+    margin: 8px 0px 0px 0px;
+}
+
+#new-180{
+    font-size: large;
+    color: #d2201c;
+    margin: 8px 0px 0px 15px;
+}
+
+.gnome-sock-content {
+    display: flex;
+    flex-direction: column;
+    transition: all .2s ease-in-out;
+}
+
+.gnome-sock-content:hover {
+    box-shadow: 1px 1px 10px #c7c7c7;
+}
+
+.gnome-sock-content-imagery {
+    block-size: 300px;
+    position:relative;
+    left: 4px;
+}
+
+#gnome-sock {
+    width: 225px;
+    height: auto;
+}
+
+.gnome-sock-discount{
+    height: 25px;
+    width: 55px;
+    background-color: #d2201c;
+    border-radius: 4px 4px 4px 4px;
+    position: relative;
+    bottom: 289px;
+    left: 17px;
+}
+
+.gnome-sock-discount-text {
+    color: #f6f6f6;
+    position: relative;
+    bottom: 329px;
+    left: 42px;
+    font-weight: lighter;
+    font-size: 90%;
+}
+
+.gnome-sock-extra {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: #ffffff;
+    align-items: center;
+    border: 1px;
+    grid-gap: 1px;
+    box-shadow: 1px 1px 5px grey;
+    height: 40px;
+    width: 185px;
+    justify-items: center;
+    margin: 0px 20px 0px 20px;
+    position: relative;
+    top: -141px;
+    left: -6px;
+    transform: rotateX(-90deg);
+    transition: transform 0.4s;
+}
+
+.gnome-sock-content:hover .gnome-sock-extra {
+    transform: rotateX(0deg);
+}
+
+#parezca-new-razonable-etc {
+    margin: 0px 0px 5px 0px;
+}
+
+#parezca-new-razonable-etc:hover {
+    color: #d2201c;
+}
+
+#parezca-new-razonable-etc:after{
+    content: '';
+    position: absolute;
+    width: 0; 
+    height: 1px;
+    display: block;
+    right: 0;
+    transition: width .2s ease;
+}
+   
+#parezca-new-razonable-etc:hover:after{
+    width: 11.4%;
+    left: 66.8%;
+    background: #d2201c;
+}
+
+.gnome-sock-info1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0px 10px 0px;
+}
+
+.gnome-sock-info2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.gnome-sock-price-update {
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.xmas-accessory-content {
+    display: flex;
+    flex-direction: column;
+    transition: all .2s ease-in-out;
+}
+
+.xmas-accessory-content:hover {
+    box-shadow: 1px 1px 10px #c7c7c7;
+}
+
+.xmas-accessory-content-imagery {
+    block-size: 292.67px;
+    position: relative;
+    left: 4px;
+}
+
+#xmas-accessory {
+    width: 225px;
+    height: auto;
+}
+
+.xmas-accessory-discount{
+    height: 25px;
+    width: 55px;
+    background-color: #d2201c;
+    border-radius: 4px 4px 4px 4px;
+    position: relative;
+    bottom: 282px;
+    left: 17px;
+}
+
+.xmas-accessory-discount-text {
+    color: #f6f6f6;
+    position: relative;
+    bottom: 322px;
+    left: 39px;
+    font-weight: lighter;
+    font-size: 90%;
+}
+
+.xmas-accessory-extra {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: #ffffff;
+    align-items: center;
+    border: 1px;
+    grid-gap: 1px;
+    box-shadow: 1px 1px 5px grey;
+    height: 40px;
+    width: 185px;
+    justify-items: center;
+    margin: 0px 20px 0px 20px;
+    position: relative;
+    top: -141px;
+    left: -6px;
+    transform: rotateX(-90deg);
+    transition: transform 0.4s;
+}
+
+.xmas-accessory-content:hover .xmas-accessory-extra {
+    transform: rotateX(0deg);
+}
+
+.xmas-accessory-time-left {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: #ffffff;
+    align-items: center;
+    border: 1px;
+    grid-gap: 1px;
+    box-shadow: 1px 1px 5px grey;
+    height: 60px;
+    width: 185px;
+    justify-items: center;
+    margin: 0px 0px 0px 15px;
+    position: relative;
+    top: -290px;
+    background: rgba(255, 255, 255, 0.85);
+}
+
+.xmas-accessory-time-left p{
+    text-align: center;
+    margin: 0px;
+}
+
+.xmas-accessory-info1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0px 10px 0px;
+}
+
+.xmas-accessory-info2 {
+    display: flex;
+    flex-direction: column;
+}
+
+#quedando-esencialmente {
+    margin: 0px 0px 5px 0px;
+}
+
+#quedando-esencialmente:hover {
+    color: #d2201c;
+}
+
+#quedando-esencialmente:after{
+    content: '';
+    position: absolute;
+    width: 0; 
+    height: 1px;
+    display: block;
+    right: 0;
+    transition: width .2s ease;
+}
+   
+#quedando-esencialmente:hover:after{
+    width: 12.3%;
+    left: 82.8%;
+    background: #d2201c;
+}
+
+.xmas-accessory-price-update {
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#old-559 {
+    font-size: medium;
+    text-decoration: line-through;
+    margin: 8px 0px 0px 0px;
+}
+
+#new-526{
+    font-size: large;
+    color: #d2201c;
+    margin: 8px 0px 0px 15px;
+}
+
+.star-rating{
+    cursor: context-menu;
+}
+
+.star {
+    color: #f4d88e;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.pebona-footer:before {
+    border-top: 2px solid #dddddd;
+    display: block;
+    position: relative;
+    top: -25px;
+    margin: 0 auto;
+    width: 100%;
+    content: "";
+}
+
+.pebona-additional-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 30px 0px 0px 0px;
+}
+
+.copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#pebona-copyright-info {
+    font-style: italic;
+    font-size: small;
+    color: #7575758e;
+    margin: 10px 115px 0px 0px;
+}
+
+mark {
+    color: black;
+    font-weight: bold;
+    background-color: transparent;
+    cursor:pointer;
+}
+
+mark:hover{
+    color: #d2201c;
+}
+
+.newsletter-advert {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#letter-sign-up-title {
+    font-size: medium;
+    margin: 5px 0px 0px 0px;
+    font-weight: 600;
+}
+
+#letter-sign-up-info {
+    font-size: small;
+    margin: 15px 17px 0px 0px;
+    font-weight: 600;
+}
+
+.email-address {
+    display: flex;
+    align-items: flex-start;
+}
+
+input[type=email] {
+    height: 59%;
+    width: 65%;
+    border-radius: 15px 15px 15px 15px;
+    background-color: #f6f6f6;
+    outline: none;
+    border: none;
+    padding: 0px 0px 0px 20px;
+    font-family: "Karla";
+    font-weight: bold;
+    color: black;
+    position: relative;
+    display:inline-block;
+}
+
+.email-address button[type=submit] {
+    height: 40px;
+    width: 101px;
+    border-radius: 15px 15px 15px 15px;
+    font-family: "Karla";
+    font-weight: bold;
+    position: absolute;
+    left: 1015px;
+    outline: none;
+    border:transparent;
+    cursor: pointer;
+}
+
+#sign-up-button:hover{
+    background-color: #d2201c;
+    transition: background-color 0.5s;
+    color: #f6f6f6;
+}
+
+.social-media {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.social-media-circle {
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    border-color: transparent;
+    position: absolute;
+}
+
+.blue-twitter {
+    background-color: #1DA1F2;
+}
+
+.blue-facebook {
+    background-color: #4267B2;
+}
+
+.pink-instagram {
+    background-color: #bc2a8d;
+}
+
+.red-google {
+    background-color: #e95950;
+}
+
+.purple-pinterest {
+    background-color: #8a3ab9;
+}
+
+.blue-linkedin {
+    background-color: #0077b5;
+}
+
+.social-media div {
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+}
+
+#twitter {
+    position: relative;
+    top:10px;
+    left:12px;
+    color: #f6f6f6;
+}
+
+#facebook {
+    position: relative;
+    top:10px;
+    left:14px;
+    color: #f6f6f6;
+}
+
+#instagram {
+    position: relative;
+    top:10px;
+    left:12px;
+    color: #f6f6f6;
+}
+
+#google-plus {
+    position: relative;
+    top:12px;
+    left:12px;
+    color: #f6f6f6;
+}
+
+#pinterest {
+    position: relative;
+    top:12px;
+    left:14px;
+    color: #f6f6f6;
+}
+
+#linkedin {
+    position: relative;
+    top:10px;
+    left:12px;
+    color: #f6f6f6;
+}
+
+
+
+/* Para el siguiente apartado, nos centraremos en la versión móvil, 
+donde se ha ajustado lo mejor posible los elementos de forma que el 
+layout fuese diferente al del modo escritorio pero siguiendo la misma
+jerarquía de contenidos */
+
+/*
+Medida a la que se activa la vista móvil: 
+    + 500 de width
+    + Cualquiera de height 
+*/
+
+@media (max-width: 500px){
+    html {
+        font-family: 'Karla';
+        margin: 25px 25px 25px 5px;
+    }
+
+    body{
+        margin:0px;
+    }
+
+    .pebona-header {
+        font-size: 10px;
+        display: flex;
+        position: fixed;
+        background-color: #FFFFFF;
+        z-index: 100;
+        margin-top: -25px;
+        padding: 20px 0px 0px 0px;
+    }
+    
+    .pebona-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .logo {
+        width: 150px;
+        height: auto;
+    }
+    
+    .nav-sections {
+        display: flex;
+        margin:0px;
+        padding:0px;
+    }
+    
+    .nav-sections li {
+        display: flex;
+        margin: 25px 15px 25px 15px;
+        align-items: center;
+    }
+    
+    .nav-sections a:hover {
+        color: #d2201c;
+    }
+    
+    .nav-sections a {
+        color: #000000;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+    }
+    
+    .pebona-content input[type=text] {
+        border: none;
+        font-family: "Karla";
+        font-size: 16px;
+        font-weight:bold;
+        outline: none;
+    }
+    
+    .search-bar {
+        margin: 0px 50px 0px 0px;
+        align-self: flex-end;
+    }
+    
+    ::placeholder {
+        color:#000000;
+        opacity: 33%;
+    }
+    
+    input{
+        height:auto;
+        width:75%;
+    }
+    
+    .pebona-content button[type=submit] {
+        border: none;
+        outline: none;
+        color: unset;
+        background-color: transparent;
+    }
+    
+    .gg-search {
+        cursor: pointer;
+    }
+    
+    .gg-search:hover {
+        color: #d2201c;
+    }
+    
+    .shopping-bag {
+        cursor: pointer;
+        align-self: flex-start;
+        margin: 0px 0px 0px 20px;
+        bottom: 15px;
+    }
+    
+    .shopping-bag:hover {
+        color: #d2201c;
+    }
+    
+    .red-pop-up-text {
+        color: #f6f6f6;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 2.2px;
+        left: 20px;
+        font-weight: lighter;
+        font-size: 90%;
+    }
+    
+    .red-pop-up {
+        background: #d2201c;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        position: relative;
+        bottom: 10px;
+        left: 15px;
+    }
+    
+    #bag {
+        position: absolute;
+        bottom: 0px;
+    }
+    
+    #gear{
+        cursor: pointer;
+        align-self: flex-end;
+        margin: 0px 20px 0px 0px;
+        bottom: 38px;
+        position: relative;
+    }
+    
+    #gear:hover {
+        color: #d2201c;
+    }
+    
+    /******* GENERAL CONTENT ********/
+    
+    .general-content {
+        margin: 0px 0px 0px 0px;
+    }
+    
+    .welcome-content {
+        margin: 0px 0px 0px 0px;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: none;
+    }
+    
+    .left-side {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        margin: 190px 0px 0px 0px;
+    }
+    
+    .hoodie-boy-elements {
+        display: flex;
+        flex-direction: column;
+        top: 180px;
+        left: 0px;
+        position: relative;
+        align-items: flex-start;
+    }
+    
+    .horitzonal-elements {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    #red-tag{
+        height: 30px;
+        width: 111px;
+        background-color: #d2201c;
+        border-radius: 3px 3px 3px 3px;
+        position: absolute;
+    }
+    
+    #red-tag-text {
+        color: white;
+        position: relative;
+        font-size: small;
+        margin: 8px 8px 8px 6px;
+    }
+    
+    .week-sale-text {
+        color: black;
+        font-size: larger;
+        font-weight: bold;
+        margin: 3px 0px 0px 10px;
+    }
+    
+    .sport-sneaker-2018 {
+        color: black;
+        font-size: 65px;
+        font-weight: 600;
+        margin: 20px 0px 0px 0px;
+    }
+    
+    .explore-now {
+        color: black;
+        font-size: 15px;
+        font-weight: 600;
+        margin:60px 0px 0px 0px;
+    }
+    
+    .slider-circles {
+        display:none;
+        position: absolute;
+        bottom: 125px;
+        left: 393px;
+    }
+    
+    .slider-circles span{
+        margin:0px 5px 0px 5px;
+    }
+    
+    .dot {
+        height: 15px;
+        width: 15px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 50%;
+        display: inline-block;
+    }
+    
+    #active-dot {
+        height: 15px;
+        width: 15px;
+        background-color: #d2201c;
+        border-radius: 50%;
+        display: inline-block;
+    }
+    
+    .ls-down {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .lsd-left{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+    }
+    
+    .right-side {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+    }
+    
+    .rs-up {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .rsu-right {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+    }
+    
+    #hoodie-boy {
+        width: 540px;
+        height: 477px;
+        padding: 0px;
+    }
+    
+    #jacket {
+        width: 288px;
+        height: 490px;
+        padding: 0px;
+    }
+    
+    #sunglasses {
+        width: 252px;
+        height: 243px;
+    }
+    
+    #sneaker-description {
+        width: 266px;
+        height: 243px;
+        bottom: 54px;
+        position: relative;
+    }
+    
+    #arrival-shoes-description {
+        width: 290px;
+        height: 250px;
+        padding: 0px 0px 0px 0px;
+    }
+    
+    #accesories {
+        width: 290px;
+        height: 232px;
+        padding: 0px 0px 0px 0px;
+    }
+    
+    #handbag-description {
+        width: 250px;
+        height: 486px;
+        padding: 0px;
+    }
+    
+    #redhead-girl {
+        width: 540px;
+        height: 520px;
+        padding: 0px;
+        position: relative;
+        bottom: 92px;
+    }
+    
+    .title-and-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .title {
+        margin: 70px 0px 0px 0px; 
+        font-size: xx-large;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .title:after {
+        content: url(https://cdn.shopify.com/s/files/1/0049/9043/5439/t/2/assets/title.png);
+        margin:-3% 0;
+    }
+    
+    .subtitle {
+        margin: 25px 0px 65px 0px;
+    }
+    
+    .product-listing {
+        display: grid;
+        justify-items: center;
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        margin: 0px 0px 100px 0px;
+    }
+    
+    .product-listing div {
+        padding: 5px 5px 5px 5px;
+    }
+    
+    .fa-heart {
+        cursor: pointer;
+        font-size: 18px;
+    }
+    
+    .fa-heart:hover {
+        color: #d2201c;
+    }
+    
+    .gg-link {
+        cursor: pointer;
+    }
+    
+    .gg-link:hover {
+        color: #d2201c;
+    }
+    
+    .gg-shopping-bag {
+        cursor: pointer;
+    }
+    
+    .gg-shopping-bag:hover {
+        color: #d2201c;
+    }
+    
+    .new-trending-products{
+        position: relative;
+        left: 41px;
+    }
+
+    .wallet-content {
+        display: flex;
+        flex-direction: column;
+        transition: all .2s ease-in-out;
+    }
+    
+    .wallet-content:hover {
+        box-shadow: 1px 1px 10px #c7c7c7;
+    }
+    
+    .wallet-content-imagery {
+        block-size: 225px;
+    }
+    
+    #wallet {
+        width: 225px;
+        height: auto;
+    }
+    
+    .wallet-discount{
+        height: 25px;
+        width: 55px;
+        background-color: #d2201c;
+        border-radius: 4px 4px 4px 4px;
+        position: relative;
+        bottom: 214px;
+        left: 17px;
+    }
+    
+    .wallet-discount-text {
+        color: #f6f6f6;
+        position: relative;
+        bottom: 254px;
+        left: 39px;
+        font-weight: lighter;
+        font-size: 90%;
+    }
+    
+    .wallet-extra {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        background-color: #ffffff;
+        align-items: center;
+        border: 1px;
+        grid-gap: 1px;
+        box-shadow: 1px 1px 5px grey;
+        height: 40px;
+        width: 185px;
+        justify-items: center;
+        margin: 0px 20px 0px 20px;
+        position: relative;
+        top: -141px;
+        left: -6px;
+        transform: rotateX(-90deg);
+        transition: transform 0.4s;
+    }
+    
+    .wallet-content:hover .wallet-extra {
+        transform: rotateX(0deg);
+    }
+    
+    .wallet-info1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 10px 0px 10px 0px;
+    }
+    
+    .krystle {
+        font-size: small;
+        margin: 0px 0px 0px 0px;
+    }
+    
+    .krystle:hover{
+        color: #d2201c;
+        transition: color 0.2s;
+        cursor: pointer;
+    }
+    
+    .wallet-info2 {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #parezca-new-razonable {
+        margin: 0px 0px 5px 0px;
+    }
+    
+    #parezca-new-razonable:hover {
+        color: #d2201c;
+    }
+    
+    #parezca-new-razonable:after{
+        content: '';
+        position: absolute;
+        width: 0; 
+        height: 1px;
+        display: block;
+        right: 0;
+        transition: width .2s ease;
+    }
+       
+    #parezca-new-razonable:hover:after{
+        display:none;
+        width: 10.7%;
+        left: 4.3%;
+        background: #d2201c;
+    }
+    
+    .wallet-price-update {
+        display:flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .old-526 {
+        font-size: medium;
+        text-decoration: line-through;
+        margin: 8px 0px 0px 0px;
+    }
+    
+    .new-500{
+        font-size: large;
+        color: #d2201c;
+        margin: 8px 0px 0px 15px;
+    }
+    
+    .sneaker-content {
+        display: flex;
+        flex-direction: column;
+        transition: all .2s ease-in-out;
+    }
+    
+    .sneaker-content:hover {
+        box-shadow: 1px 1px 10px #c7c7c7;
+    }
+    
+    .sneaker-content-imagery {
+        block-size: 225px;
+    }
+    
+    #sneaker {
+        width: 225px;
+        height: auto;
+    }
+    
+    .sneaker-discount{
+        height: 25px;
+        width: 55px;
+        background-color: #d2201c;
+        border-radius: 4px 4px 4px 4px;
+        position: relative;
+        bottom: 214px;
+        left: 17px;
+    }
+    
+    .sneaker-discount-text {
+        color: #f6f6f6;
+        position: relative;
+        bottom: 254px;
+        left: 39px;
+        font-weight: lighter;
+        font-size: 90%;
+    }
+    
+    .sneaker-extra {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        background-color: #ffffff;
+        align-items: center;
+        border: 1px;
+        grid-gap: 1px;
+        box-shadow: 1px 1px 5px grey;
+        height: 40px;
+        width: 185px;
+        justify-items: center;
+        margin: 0px 20px 0px 20px;
+        position: relative;
+        top: -141px;
+        left: -6px;
+        transform: rotateX(-90deg);
+        transition: transform 0.4s;
+    }
+    
+    .sneaker-content:hover .sneaker-extra {
+        transform: rotateX(0deg);
+    }
+    
+    .sneaker-info1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 10px 0px 10px 0px;
+    }
+    
+    .glus {
+        font-size: small;
+        margin: 0px 0px 0px 0px;
+    }
+    
+    .glus:hover{
+        color: #d2201c;
+        transition: color 0.2s;
+        cursor:pointer;
+    }
+    
+    .sneaker-info2 {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #lorem-ipsum {
+        margin: 0px 0px 5px 0px;
+    }
+    
+    #lorem-ipsum:hover {
+        color: #d2201c;
+    }
+    
+    #lorem-ipsum:after{
+        content: '';
+        position: absolute;
+        width: 0; 
+        height: 1px;
+        display: block;
+        right: 0;
+        transition: width .2s ease;
+    }
+       
+    #lorem-ipsum:hover:after{
+        display:none;
+        width: 6.1%;
+        left: 19.8%;
+        background: #d2201c;
+    }
+    
+    .sneaker-price-update {
+        display:flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    #old-555 {
+        font-size: medium;
+        text-decoration: line-through;
+        margin: 8px 0px 0px 0px;
+    }
+    
+    .c-handbag-content {
+        display: flex;
+        flex-direction: column;
+        transition: all .2s ease-in-out;
+    }
+    
+    .c-handbag-content:hover {
+        box-shadow: 1px 1px 10px #c7c7c7;
+    }
+    
+    .c-handbag-content-imagery {
+        block-size: 225px;
+    }
+    
+    #c-handbag {
+        width: 225px;
+        height: auto;
+    }
+    
+    .c-handbag-discount{
+        height: 25px;
+        width: 55px;
+        background-color: #d2201c;
+        border-radius: 4px 4px 4px 4px;
+        position: relative;
+        bottom: 214px;
+        left: 17px;
+    }
+    
+    .c-handbag-discount-text {
+        color: #f6f6f6;
+        position: relative;
+        bottom: 254px;
+        left: 39px;
+        font-weight: lighter;
+        font-size: 90%;
+    }
+    
+    .c-handbag-extra {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        background-color: #ffffff;
+        align-items: center;
+        border: 1px;
+        grid-gap: 1px;
+        box-shadow: 1px 1px 5px grey;
+        height: 40px;
+        width: 185px;
+        justify-items: center;
+        margin: 0px 20px 0px 20px;
+        position: relative;
+        top: -141px;
+        left: -6px;
+        transform: rotateX(-90deg);
+        transition: transform 0.4s;
+    }
+    
+    .c-handbag-content:hover .c-handbag-extra {
+        transform: rotateX(0deg);
+    }
+    
+    .c-handbag-info1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 10px 0px 10px 0px;
+    }
+    
+    #generic {
+        font-size: small;
+        margin: 0px 0px 0px 0px;
+    }
+    
+    #generic:hover{
+        color: #d2201c;
+        transition: color 0.2s;
+        cursor: pointer;
+    }
+    
+    .c-handbag-info2 {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #pensamiento-popular {
+        margin: 0px 0px 5px 0px;
+    }
+    
+    #pensamiento-popular:hover {
+        color: #d2201c;
+    }
+    
+    #pensamiento-popular:after{
+        content: '';
+        position: absolute;
+        width: 0; 
+        height: 1px;
+        display: block;
+        right: 0;
+        transition: width .2s ease;
+    }
+       
+    #pensamiento-popular:hover:after{
+        display:none;
+        width: 9.7%;
+        left: 35.25%;
+        background: #d2201c;
+    }
+    
+    .c-handbag-price-update {
+        display:flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    #old-366 {
+        font-size: medium;
+        text-decoration: line-through;
+        margin: 8px 0px 0px 0px;
+    }
+    
+    #new-258{
+        font-size: large;
+        color: #d2201c;
+        margin: 8px 0px 0px 15px;
+    }
+    
+    .tr-sunglasses-content {
+        display: flex;
+        flex-direction: column;
+        transition: all .2s ease-in-out;
+    }
+    
+    .tr-sunglasses-content:hover {
+        box-shadow: 1px 1px 10px #c7c7c7;
+    }
+    
+    .tr-sunglasses-content-imagery {
+        block-size: 225px;
+    }
+    
+    #tr-sunglasses {
+        width: 293px;
+        height: 259px;
+    }
+    
+    .tr-sunglasses-discount{
+        height: 25px;
+        width: 55px;
+        background-color: #d2201c;
+        border-radius: 4px 4px 4px 4px;
+        position: relative;
+        bottom: 214px;
+        left: 17px;
+    }
+    
+    .tr-sunglasses-discount-text {
+        color: #f6f6f6;
+        position: relative;
+        bottom: 254px;
+        left: 39px;
+        font-weight: lighter;
+        font-size: 90%;
+    }
+    
+    .tr-sunglasses-extra {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        background-color: #ffffff;
+        align-items: center;
+        border: 1px;
+        grid-gap: 1px;
+        box-shadow: 1px 1px 5px grey;
+        height: 40px;
+        width: 185px;
+        justify-items: center;
+        margin: 0px 20px 0px 20px;
+        position: relative;
+        top: -141px;
+        left: -6px;
+        transform: rotateX(-90deg);
+        transition: transform 0.4s;
+    }
+    
+    .tr-sunglasses-content:hover .tr-sunglasses-extra {
+        transform: rotateX(0deg);
+    }
+    
+    .tr-sunglasses-info1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 10px 0px 10px 0px;
+        position: relative;
+        bottom: -30px;
+    }
+    
+    #imara {
+        font-size: small;
+        margin: 0px 0px 0px 0px;
+        cursor:pointer;
+    }
+    
+    #imara:hover{
+        color: #d2201c;
+        transition: color 0.2s;
+    }
+    
+    .tr-sunglasses-info2 {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        bottom: -30px;
+    }
+    
+    #predefinidos-cuando {
+        margin: 0px 0px 5px 0px;
+    }
+    
+    #predefinidos-cuando:hover {
+        color: #d2201c;
+    }
+    
+    #predefinidos-cuando:after{
+        content: '';
+        position: absolute;
+        width: 0; 
+        height: 1px;
+        display: block;
+        right: 0;
+        transition: width .2s ease;
+    }
+       
+    #predefinidos-cuando:hover:after{
+        display:none;
+        width: 9.5%;
+        left: 50.7%;
+        background: #d2201c;
+    }
+    
+    .tr-sunglasses-price-update {
+        display:flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    #old-190 {
+        font-size: medium;
+        text-decoration: line-through;
+        margin: 8px 0px 0px 0px;
+    }
+    
+    #new-180{
+        font-size: large;
+        color: #d2201c;
+        margin: 8px 0px 0px 15px;
+    }
+    
+    .gnome-sock-content {
+        display: flex;
+        flex-direction: column;
+        transition: all .2s ease-in-out;
+    }
+    
+    .gnome-sock-content:hover {
+        box-shadow: 1px 1px 10px #c7c7c7;
+    }
+    
+    .gnome-sock-content-imagery {
+        block-size: 300px;
+    }
+    
+    #gnome-sock {
+        width: 225px;
+        height: auto;
+    }
+    
+    .gnome-sock-discount{
+        height: 25px;
+        width: 55px;
+        background-color: #d2201c;
+        border-radius: 4px 4px 4px 4px;
+        position: relative;
+        bottom: 289px;
+        left: 17px;
+    }
+    
+    .gnome-sock-discount-text {
+        color: #f6f6f6;
+        position: relative;
+        bottom: 329px;
+        left: 39px;
+        font-weight: lighter;
+        font-size: 90%;
+    }
+    
+    .gnome-sock-extra {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        background-color: #ffffff;
+        align-items: center;
+        border: 1px;
+        grid-gap: 1px;
+        box-shadow: 1px 1px 5px grey;
+        height: 40px;
+        width: 185px;
+        justify-items: center;
+        margin: 0px 20px 0px 20px;
+        position: relative;
+        top: -141px;
+        left: -6px;
+        transform: rotateX(-90deg);
+        transition: transform 0.4s;
+    }
+    
+    .gnome-sock-content:hover .gnome-sock-extra {
+        transform: rotateX(0deg);
+    }
+    
+    #parezca-new-razonable-etc {
+        margin: 0px 0px 5px 0px;
+    }
+    
+    #parezca-new-razonable-etc:hover {
+        color: #d2201c;
+    }
+    
+    #parezca-new-razonable-etc:after{
+        content: '';
+        position: absolute;
+        width: 0; 
+        height: 1px;
+        display: block;
+        right: 0;
+        transition: width .2s ease;
+    }
+       
+    #parezca-new-razonable-etc:hover:after{
+        display:none;
+        width: 11.4%;
+        left: 66.2%;
+        background: #d2201c;
+    }
+    
+    .gnome-sock-info1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 10px 0px 10px 0px;
+    }
+    
+    .gnome-sock-info2 {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .gnome-sock-price-update {
+        display:flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .xmas-accessory-content {
+        display: flex;
+        flex-direction: column;
+        transition: all .2s ease-in-out;
+    }
+    
+    .xmas-accessory-content:hover {
+        box-shadow: 1px 1px 10px #c7c7c7;
+    }
+    
+    .xmas-accessory-content-imagery {
+        block-size: 292.67px;
+        position: relative;
+        bottom: -30px;
+    }
+    
+    #xmas-accessory {
+        width: 225px;
+        height: auto;
+    }
+    
+    .xmas-accessory-discount{
+        height: 25px;
+        width: 55px;
+        background-color: #d2201c;
+        border-radius: 4px 4px 4px 4px;
+        position: relative;
+        bottom: 282px;
+        left: 17px;
+    }
+    
+    .xmas-accessory-discount-text {
+        color: #f6f6f6;
+        position: relative;
+        bottom: 322px;
+        left: 39px;
+        font-weight: lighter;
+        font-size: 90%;
+    }
+    
+    .xmas-accessory-extra {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        background-color: #ffffff;
+        align-items: center;
+        border: 1px;
+        grid-gap: 1px;
+        box-shadow: 1px 1px 5px grey;
+        height: 40px;
+        width: 185px;
+        justify-items: center;
+        margin: 0px 20px 0px 20px;
+        position: relative;
+        top: -141px;
+        left: -6px;
+        transform: rotateX(-90deg);
+        transition: transform 0.4s;
+    }
+    
+    .xmas-accessory-content:hover .xmas-accessory-extra {
+        transform: rotateX(0deg);
+    }
+    
+    .xmas-accessory-time-left {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        background-color: #ffffff;
+        align-items: center;
+        border: 1px;
+        grid-gap: 1px;
+        box-shadow: 1px 1px 5px grey;
+        height: 60px;
+        width: 185px;
+        justify-items: center;
+        margin: 0px 20px 0px 20px;
+        position: relative;
+        top: -290px;
+        background: rgba(255, 255, 255, 0.85);
+    }
+    
+    .xmas-accessory-time-left p{
+        text-align: center;
+        margin: 0px;
+    }
+    
+    .xmas-accessory-info1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 10px 0px 10px 0px;
+        position: relative;
+        bottom: -30px;
+    }
+    
+    .xmas-accessory-info2 {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        bottom: -30px;
+    }
+    
+    #quedando-esencialmente {
+        margin: 0px 0px 5px 0px;
+    }
+    
+    #quedando-esencialmente:hover {
+        color: #d2201c;
+    }
+    
+    #quedando-esencialmente:after{
+        content: '';
+        position: absolute;
+        width: 0; 
+        height: 1px;
+        display: block;
+        right: 0;
+        transition: width .2s ease;
+    }
+       
+    #quedando-esencialmente:hover:after{
+        display:none;
+        width: 12.3%;
+        left: 81.6%;
+        background: #d2201c;
+    }
+    
+    .xmas-accessory-price-update {
+        display:flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    #old-559 {
+        font-size: medium;
+        text-decoration: line-through;
+        margin: 8px 0px 0px 0px;
+    }
+    
+    #new-526{
+        font-size: large;
+        color: #d2201c;
+        margin: 8px 0px 0px 15px;
+    }
+    
+    .star-rating{
+        cursor: context-menu;
+    }
+    
+    .star {
+        color: #f4d88e;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    
+    .pebona-footer:before {
+        border-top: 2px solid #dddddd;
+        display: block;
+        position: relative;
+        top: -25px;
+        margin: 0 auto;
+        width: 100%;
+        content: "";
+    }
+
+    .pebona-footer{
+        position: relative;
+        left: 44px;
+    }
+    
+    .pebona-additional-info {
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        margin: 30px 0px 0px 0px;
+        justify-items: stretch;
+        justify-content: space-around;
+    }
+    
+    .copyright {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #pebona-copyright-info {
+        font-style: italic;
+        font-size: small;
+        color: #7575758e;
+        margin: 10px 0px 10px 0px;
+    }
+    
+    mark {
+        color: black;
+        font-weight: bold;
+        background-color: transparent;
+        cursor:pointer;
+    }
+    
+    mark:hover{
+        color: #d2201c;
+    }
+    
+    .newsletter-advert {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #letter-sign-up-title {
+        font-size: medium;
+        margin: 5px 0px 0px 0px;
+        font-weight: 600;
+    }
+    
+    #letter-sign-up-info {
+        font-size: small;
+        margin: 15px 0px 0px 0px;
+        font-weight: 600;
+    }
+    
+    .email-address {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    
+    input[type=email] {
+        height: 59%;
+        width: 65%;
+        border-radius: 15px 15px 15px 15px;
+        background-color: #f6f6f6;
+        outline: none;
+        border: none;
+        padding: 0px 0px 0px 20px;
+        font-family: "Karla";
+        font-weight: bold;
+        color: black;
+        position: relative;
+        display:inline-block;
+    }
+    
+    .email-address button[type=submit] {
+        height: 42px;
+        width: 101px;
+        border-radius: 15px 15px 15px 15px;
+        font-family: "Karla";
+        font-weight: bold;
+        position: absolute;
+        left: 259px;
+        outline: none;
+        border: transparent;
+        cursor: pointer;
+    }
+    
+    #sign-up-button:hover{
+        background-color: #d2201c;
+        transition: background-color 0.5s;
+        color: #f6f6f6;
+    }
+    
+    .social-media {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    
+    .social-media-circle {
+        border-radius: 50%;
+        width: 38px;
+        height: 38px;
+        border-color: transparent;
+        position: absolute;
+    }
+    
+    .blue-twitter {
+        background-color: #1DA1F2;
+    }
+    
+    .blue-facebook {
+        background-color: #4267B2;
+    }
+    
+    .pink-instagram {
+        background-color: #bc2a8d;
+    }
+    
+    .red-google {
+        background-color: #e95950;
+    }
+    
+    .purple-pinterest {
+        background-color: #8a3ab9;
+    }
+    
+    .blue-linkedin {
+        background-color: #0077b5;
+    }
+    
+    .social-media div {
+        width: 38px;
+        height: 38px;
+        cursor: pointer;
+    }
+    
+    #twitter {
+        position: relative;
+        top:10px;
+        left:12px;
+        color: #f6f6f6;
+    }
+    
+    #facebook {
+        position: relative;
+        top:10px;
+        left:14px;
+        color: #f6f6f6;
+    }
+    
+    #instagram {
+        position: relative;
+        top:10px;
+        left:12px;
+        color: #f6f6f6;
+    }
+    
+    #google-plus {
+        position: relative;
+        top:12px;
+        left:12px;
+        color: #f6f6f6;
+    }
+    
+    #pinterest {
+        position: relative;
+        top:12px;
+        left:14px;
+        color: #f6f6f6;
+    }
+    
+    #linkedin {
+        position: relative;
+        top:10px;
+        left:12px;
+        color: #f6f6f6;
+    }
+}
